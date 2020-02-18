@@ -1,12 +1,6 @@
-import subtract, { square, add } from './utils.js';
-import isSenior, { isAdult, canDrink } from "./person";
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-console.log('app.js is running!!!');
-console.log(square(3));
-console.log(add(3, 4));
-console.log(subtract(3, 4));
-console.log(isAdult(13));
-console.log(isAdult(22));
-console.log(canDrink(20));
-console.log(canDrink(22));
-console.log(isSenior(66));
+const template = <p>THIS IS JSX FROM WEBPACK!</p>;
+
+ReactDOM.render(template, document.getElementById('app'));
