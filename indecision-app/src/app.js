@@ -1,6 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const template = <p>THIS IS JSX FROM WEBPACK!</p>;
+import IndecisionApp from "./components/IndecisionApp";
 
-ReactDOM.render(template, document.getElementById('app'));
+ReactDOM.render(<IndecisionApp />, document.getElementById('app'));
+
+class OldSyntax {
+    constructor() {
+        this.name = 'Mike';
+    }
+}
