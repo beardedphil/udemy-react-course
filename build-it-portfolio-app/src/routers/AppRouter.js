@@ -1,10 +1,10 @@
 import {BrowserRouter, Link, Route, Switch} from "react-router-dom";
 import React from "react";
-import AddExpensePage from "../components/AddExpensePage";
-import EditExpensePage from "../components/EditExpensePage";
-import ExpenseDashboardPage from "../components/ExpenseDashboardPage";
+import HomePage from "../components/HomePage";
+import PortfolioPage from "../components/PortfolioPage";
+import PortfolioDetailPage from "../components/PortfolioDetailPage";
 import Header from "../components/Header";
-import HelpPage from "../components/HelpPage";
+import ContactPage from "../components/ContactPage";
 import NotFoundPage from "../components/NotFoundPage";
 
 const AppRouter = () => (
@@ -14,20 +14,21 @@ const AppRouter = () => (
             <Switch>
                 <Route
                     path="/"
-                    component={ ExpenseDashboardPage }
+                    component={ HomePage }
                     exact={ true }
                 />
                 <Route
-                    path="/create"
-                    component={ AddExpensePage }
+                    path="/portfolio"
+                    component={ PortfolioPage }
+                    exact={ true }
                 />
                 <Route
-                    path="/edit/:id"
-                    component={ EditExpensePage }
+                    path="/portfolio/:id"
+                    component={ PortfolioDetailPage }
                 />
                 <Route
-                    path="/help"
-                    component={ HelpPage }
+                    path="/contact"
+                    component={ ContactPage }
                 />
                 <Route
                     component={ NotFoundPage }
